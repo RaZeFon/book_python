@@ -545,3 +545,66 @@ for i in range(2, 10):
     else:
         print("Неверно")
 """
+"""
+count = 1
+number = int(input("Введите число: "))
+min_1 = number
+for i in range(5):
+    number = int(input("Введите число: "))
+    if number == min_1:
+        count += 1
+    if number < min_1:
+        min_1 = number
+        count = 1
+print("Найденое минимальное значение", min_1)
+print(f"Количество min чисел подряд {count}")
+"""
+"""
+count = 0
+number = int(input("Введите число: "))
+max_1 = number
+for i in range(5):
+    number = int(input("Введите число: "))
+    if number > max_1:
+        max_1 = number
+        count += 1
+print("Счетчик", count)
+"""
+"""
+hvatit = ""
+c = 0
+while hvatit != "да":
+    c = c + 1
+    print("Закончила круг " + str(c) + ". Хватит?")
+    hvatit = input()
+print("Ну наконец-то!")
+"""
+"""
+ocenki = 10
+summa = 20
+for d in range(7):
+    b = int(input("Оценка в день " + str(d + 1) + ": "))
+    ocenki += 1
+    summa += b
+    stball = summa / ocenki
+    if stball > 2.5:
+        break
+print("Оценка: ", round(stball))
+"""
+"""
+otvet = ""
+otj = "Ых! "
+while not otvet == "lazy":
+    otvet = input("What is English \"ленивый\"? ")
+    print("Отжиматься! ")
+    for k in range(5):
+        print(otj)
+        otj = "Ы" + otj
+print("Зачет. ")
+"""
+
+
+
+
+
+
