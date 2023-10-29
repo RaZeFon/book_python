@@ -602,6 +602,31 @@ while not otvet == "lazy":
         otj = "Ы" + otj
 print("Зачет. ")
 """
+"""
+answer = ""
+while answer.upper() != "ВИЛКА":
+    answer = input("2 удара = 8 дырок. Что это? ")
+print("Супер!")
+"""
+"""
+c = 0
+while c < 3:
+    w = input()
+    if w.upper() == "STOP":
+        c += 1
+print("OK")
+"""
+
+
+
+
+
+
+
+
+
+
+
 
 
 
