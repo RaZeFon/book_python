@@ -523,3 +523,25 @@ for i in range(quantity):
         max_1, max_2 = max_2, max_1
     print(f"max 1 = {max_1}; max 2 = {max_2}")
 """
+"""
+text = input("Что нужно вывести: ")
+number = int(input("Сколько раз: "))
+for i in range(number):
+    print(f"{i + 1}: {text}")
+"""
+"""
+print("Таблица умножения")
+number = int(input("Введите число: "))
+for i in range(2, 10):
+    print(f"{number} * {i} = {number * i}")
+"""
+"""
+print("Таблица умножения 2")
+number = int(input("Введите число: "))
+for i in range(2, 10):
+    sum_num = int(input(f"{number} * {i} = "))
+    if sum_num == number * i:
+        print("Верно")
+    else:
+        print("Неверно")
+"""
