@@ -609,6 +609,7 @@ while answer.upper() != "ВИЛКА":
 print("Супер!")
 """
 """
+print("цикл ждет ввода строки \"STOP\", и после ввода строки 3 раза\nостанавливает свою работу.")
 c = 0
 while c < 3:
     w = input()
@@ -616,16 +617,110 @@ while c < 3:
         c += 1
 print("OK")
 """
-
-
-
-
-
-
-
-
-
-
+"""
+print("Цикл будет работать до тех пор, 'A' не будет равно 'B', при каждом срабатывании цикла\nпоследнее значение 'B' будет присваеватся в 'A'")
+a = input()
+b = input()
+while a != b:
+    a = b
+    b = input()
+"""
+"""
+print("Будем отнимать a от b и b от a до тех пор пока a не будет равна b")
+a = int(input())
+b = int(input())
+while a != b:
+    if a > b:
+        a = a - b
+    else:
+        b = b - a
+print(a)
+"""
+"""
+print("Цикл работает пока N больше 0, после окончания выводится сумма остатков от деления на 10")
+n = int(input())
+s = 0
+while n > 0:
+    s = s + n % 10
+    n = n // 10
+print(s)
+"""
+"""
+print("Переводит число в двоичную систему исчисления и выводит его ввиде строки")
+n = int(input())
+s = ""
+while n > 0:
+    s = str(n % 2) + s
+    n = n // 2
+print(s)
+"""
+"""
+print("Бесконечный цикол")
+count = 0
+while True:
+    print(f"{count + 1}: Бесконечность")
+    count += 1
+"""
+"""
+p = 1
+while True:
+    n = int(input())
+    if n == 0:
+        break
+    p = p * n
+print(p)
+"""
+"""
+count = 0
+macik = 0
+paytichap = 0
+churchik = 0
+chapuga = 0
+print("Обитатели планеты Яяю")
+while True:
+    chapok = int(input("Количество хапок у обитателя: "))
+    if chapok == 0:
+        print("Вы вернулись на базу, и перед вами тётя Паня")
+        break
+    else:
+        match chapok:
+            case 1|2|3|4:
+                macik += 1
+                count += 1
+            case 5:
+                paytichap += 1
+                count += 1
+            case 6|7:
+                churchik += 1
+                count += 1
+            case 8|9|10|11:
+                chapuga += 1
+                count += 1
+print("Общее количество найденых обитателей:", count)
+print(f"Масик = {macik}\nПятихап = {paytichap}\nШуршик = {churchik}\nХапуга = {chapuga}")
+"""
+"""
+count = 1
+while True:
+    count += 1
+    raz = count ** 7 - count ** 5
+    if raz > 1_000_000:
+        print(count)
+        break
+"""
+"""
+count = 0
+start = 100
+finish = 999
+while start < finish + 1:
+    n1 = start // 100
+    n2 = (start // 10)  % 10
+    n3 = start % 10
+    if n3 < n1 and n1 < n2:
+        count += 1
+    start += 1
+print(count)
+"""
 
 
 
