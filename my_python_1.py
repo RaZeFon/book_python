@@ -721,6 +721,44 @@ while start < finish + 1:
     start += 1
 print(count)
 """
+"""
+a = int(input("Начало: "))
+b = int(input("Конец: "))
+while b - a >= 1:
+    m = (a + b) // 2
+    r = input(">" + str(m) + "? ")
+    if r == "ДА":
+        a = m + 1
+    else:
+        b = m
+print(a)
+"""
+"""
+digit = ["Ноль", "Один", "Два", "Три", "Четыре", "Пять", "Шесть", "Семь", "Восемь", "Девять"]
+n = int(input("Введите цифру: "))
+print(digit[n])
+"""
+"""
+season = ["Зима", "Весна", "Лето", "Осень"]
+print(season[0], season[2])
+print(season[len(season) - 1])
+"""
+"""
+n = int(input("Количество участников бригады: "))
+b = []
+print("Введите их имена через Enter: ")
+for k in range(n):
+    b.append(input())
+b.sort()
+print("Состав бригады: ")
+for u in b:
+    print(u)
+"""
+
+
+
+
+
 
 
 
