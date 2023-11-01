@@ -754,15 +754,59 @@ print("Состав бригады: ")
 for u in b:
     print(u)
 """
-
-
-
-
-
-
-
-
-
+"""
+b = ["винни-пух", "иа-иа", "кролик", "пяточек", "сова"]
+r = ["первый", "второй"]
+for i in range(len(b)):
+    print(b[i] + ":", r[i % 2])
+"""
+"""
+b = ["винни-пух", "иа-иа", "кролик", "пятачок", "сова"]
+v = []
+s = 0 
+print("Кто сколько накопал нынче?")
+for k in range(len(b)):
+    r = int(input(b[k] + ": "))
+    s = s + r
+    v.append(r)
+konf = int(input("Сколько конфет заработала бригада? "))
+konfm = konf // s
+for k in range(len(b)):
+    v[k] = v[k] * konfm
+    print(b[k], "-", v[k])
+    print("бригадир:", konf - sum(vs))
+"""
+"""
+list = []
+while True:
+    n = int(input())
+    if n == 0:
+        break
+    list.append(n)
+print(list)
+"""
+"""
+w = ["to", "be", "or", "not", "to", "be"]
+print(w.index("be"))
+print(w.index("be", 3))
+print(w.count("to"))
+print(w.count("love"))
+"""
+"""
+a = []
+for k in range(5):
+    a.append(int(input()))
+a.sort()
+print("min:", a[0], " max:", a[4] )
+"""
+"""
+z = ["и", "с", "н", "л", "т", "и", "е", "е", "р", "л", "н", "т", "е", "а", "т", "о"]
+a = int(input("А = "))
+b = int(input("B = "))
+for k in range(len(z)):
+    if k % a == b:
+        print(z[k], end = "")
+"""
 
 
 
