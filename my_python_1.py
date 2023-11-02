@@ -877,18 +877,34 @@ for k in range(10):
 time.sleep(1)
 print("Враг будет разбит, победа будет за нами!")
 """
-
-
-
-
-
-
-
-
-
-
-
-
+"""
+import time
+print(time.time())
+"""
+"""
+import time
+divination = ["Любит", "Не любит", "Плюнет", "Поцелует", "К сердцу прижмет", "К чёрту пошлёт"]
+print(divination[int(time.time()) % 6])
+"""
+"""
+import time
+divination = ["Любит", "Не любит", "Плюнет", "Поцелует", "К сердцу прижмет", "К чёрту пошлёт"]
+for i in range(5):
+    time.sleep(2)
+    print(divination[int(time.time()) % 6])
+"""
+"""
+import random
+u = ["Букин", "Бякин", "Тукин", "Хрюкин", "Жукин"]
+print("К доске пойдет", random.choice(u))
+"""
+"""
+import random
+u = ["Букин", "Бякин", "Тукин", "Хрюкин", "Жукин"]
+random.shuffle(u)
+for uch in u:
+    print("К доске пойдёт", uch)
+"""
 
 
 
