@@ -972,9 +972,37 @@ random.shuffle(u)
 for uch in u:
     print("К доске пойдёт", uch)
 """
-
-
-
+"""
+#Тест на устный счёт
+import random
+random.seed()
+import time
+print("Проверим навыки устного счёта.")
+ok = 0
+t = time.time() #заодно посчитаем и время решения
+for i in range(1, 11):
+    z = random.randint(0, 1)
+    a = random.randint(10, 99)
+    b = random.randint(10, 99)    
+    if z == 0: #сложение
+        n = int(input(str(a) + " + " + str(b) + " = "))
+        if n == a + b:
+            print("Верно.")
+            ok += 1
+        else:
+            print("Неверно.")
+    else: #вычитание
+        a, b = max(a, b), min(a, b) #упорядочили числа
+        n = int(input(str(a) + " - " + str(b) + " = "))
+        if n == a - b:
+            print("Верно.")
+            ok += 1
+        else:
+            print("Неверно.")
+print("РЕЗУЛЬТАТ")
+print("Из 10 примеров верно решены", ok)
+print("Время решения -", time.time() - t, "сек.")
+"""
 
 
 
