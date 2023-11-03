@@ -877,22 +877,73 @@ for k in range(10):
 time.sleep(1)
 print("Враг будет разбит, победа будет за нами!")
 """
+"""
+import random
+while True:
+    number_1 = random.randint(10, 99)
+    number_2 = random.randint(10, 99)
+    result = int(input(f"{number_1} + {number_2} = "))
+    if result == number_1 + number_2:
+        print("Верно!")
+    else:
+        print("Неверно!")
+"""
+"""
+import random
+count = 0
+for i in range(10):
+    number_1 = random.randint(10, 99)
+    number_2 = random.randint(10, 99)
+    result = int(input(f"{number_1} + {number_2} = "))
+    if result == number_1 + number_2:
+        print("Верно!")
+        count += 1
+    else:
+        print("Неверно!")
 
+match count:
+    case 10:
+        print("Оценка 5")
+    case 9 | 8:
+        print("Оценка 4")
+    case 7 | 6 | 5:
+        print("Оценка 3")
+    case _:
+        print("Оценка 2")
+"""
+"""
+import random
+count = 0
+for i in range(10):
+    action = random.randint(0, 1)
+    number_1 = random.randint(10, 99)
+    number_2 = random.randint(10, 99)
+    
+    if action == 1:
+        result = int(input(f"{number_1} + {number_2} = "))
+        if result == number_1 + number_2:
+            print("Верно!")
+            count += 1
+        else:
+            print("Неверно!")
+    else:
+        result = int(input(f"{number_1} - {number_2} = "))
+        if result == number_1 - number_2:
+            print("Верно!")
+            count += 1
+        else:
+            print("Неверно!")
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+match count:
+    case 10:
+        print("Оценка 5")
+    case 9 | 8:
+        print("Оценка 4")
+    case 7 | 6 | 5:
+        print("Оценка 3")
+    case _:
+        print("Оценка 2")
+"""
 
 
 
