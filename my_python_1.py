@@ -1003,12 +1003,152 @@ print("РЕЗУЛЬТАТ")
 print("Из 10 примеров верно решены", ok)
 print("Время решения -", time.time() - t, "сек.")
 """
+"""
+import random
+answer = ["ДА", "НЕТ", "Сомнительно", "Верно", "Возможно", "Затрудняюсь"]
+print("Задайте вопрос, подразумевающий ответ ДА или НЕТ")
+while True:
+    question = input("Ваш вопрос: ")
+    if question == "":
+        break
+    else:
+        print(f"Мой ответ: {random.choice(answer)}")
+"""
+"""
+import random
+move = 0
+while True:
+    potato = 0
+    bush_branches = random.randint(5, 8)
+    for i in range(bush_branches):
+        potato += random.randint(0, 3)
+    if potato == 13:
+        if move % 2 == 0:
+            print(f"Победа за мной, {potato} картофелен")
+            break
+        else:
+            print(f"Победил Пятачёк, {potato} картофелен")
+            break
+    move += 1
+"""
+"""
+#Копаем картошку
+import random
+print("КОПАЕМ КАРТОШКУ НАПЕРЕГОНКИ С ПЯТАЧКОМ")
+print("Зададим параметры куста.")
+v = int(input("Количество веточек: "))
+q = int(input("Vаксимальное количество картофелин под одной веточкой: "))
+user = 0 #накопал юзер
+ptc = 0 #накопал Пятачок
+kust = 0 #номер куста
+while user < 100 and ptc < 100:
+    print("У Юзера - " + str(user) + ", а у Пятачка - " + str(ptc))
+    kust += 1
+    if kust % 2 == 0:
+        print("Куст №" + str(kust), "- куст Пятачка")
+    else:
+        print("Куст №" + str(kust), "- куст Юзера")
+    p = 0
+    for k in range(v):
+        p += random.randint(0, q)
+    print(p, "шт.")
+    if kust % 2 == 0:
+        ptc += p
+    else:
+        user += p
+    input() #чтобы сделать паузу между кустами
+print("У Юзера - " + str(user) + ", а у Пятачка - " + str(ptc))
+if user > ptc:
+    print("Победил Юзер.")
+elif user < ptc:
+    print("Победил Пятачок.")
+else:
+    print("Ничья.")
+print("Выкопано кустов:", kust)
+"""
+"""
+import random
+dice = ["1-1", "1-2", "1-3", "1-4", "1-5", "1-6", "2-2", "2-3", "2-4", "2-5", "2-6", "3-3", "3-4", "3-5", "3-6", 
+        "4-4", "4-5", "4-6", "5-5", "5-6", "6-6"]
+new_array = []
+col_dice = int(input("Какое количество игральных костей взять: "))
+for i in range(col_dice):
+    new_array.append(random.choice(dice))
+print(f"Вот кости которые вы выбрали: {new_array}")
+"""
+"""
+import random
+array = []
+for i in range(6):
+    for j in range(6):
+        if i <= j:
+            array.append(str(i + 1) + "-" + str(j + 1))
 
+random.shuffle(array)
+value = int(input("Какое количество костей вывести: "))
 
+print(array[ :value:])
+"""
+"""
+import random
+print("Числовой игровой автомат")
+number_1 = random.randint(1, 9)
+number_2 = random.randint(1, 9)
+number_3 = random.randint(1, 9)
+input("Нажмите Enter что бы начать: ")
+print()
+if number_1 == number_2 and number_2 == number_3:
+    print(f"Ваша комбинация {number_1}:{number_2}:{number_3} \nВы выиграли СУПЕР-ПРИЗ")
+elif (number_1 == number_2) or (number_1 == number_3) or (number_2 == number_3):
+    print(f"Ваша комбинация {number_1}:{number_2}:{number_3} \nВы выиграли ПРИЗ")
+else:
+    print(f"Ваша комбинация {number_1}:{number_2}:{number_3} \nВ следующий раз вам повезёт")
+print()
+"""
+"""
+#"Однорукий бандит"
+import random
+import time
+# Выбрасываемые автоматом слова
+s = ["ОХ!", "АХ!", "УХ!", "ЭХ!", "ЫХ!"]
+line = "|" * 60
+game = "ОЧЕНЬ ЭМОЦИОНАЛЬНЫЙ ИГРОВОЙ АВТОМАТ"
+print(line)
+q = "." * ((60 - len(game)) // 2) # Лень буквы считать
+print(q + game + q)
+print(line)
 
-
-
-
+count = 0 # Счётчик виртуальных центов
+while True: # Пока пользователю не надоест
+    print(line)
+    count -= 5
+    print("Количество виртуальных центов у вас на счету:", count)
+    input("Нажмите Enter, чтобы барабаны закрутились")
+    for i in range(11): # Красиво тянем время
+        print("*", end = '')
+        time.sleep(0.3)
+    # Вот что выпало:
+    a = random.choice(s)
+    b = random.choice(s)
+    c = random.choice(s)
+    print("\n" + a, b, c)
+    print("*" * 11)
+    if a == b == c:
+        print("Вы выиграли 50 центов!")
+        count += 50
+    elif a == b or b == c or a == c:
+        print("Вы выиграли 10 центов.")
+        count += 10
+    else:
+        print("Не повезло...")
+    r = input("Ещё партию? (да/нет): ")
+    if r == "нет":
+        break
+if count <= 0:
+    print("Теперь вы убедились, что азартными играми заработать нельзя.")
+else:
+    print("Вы вовремя остановились. Но могло и не повезти.")
+"""
 
 
 
