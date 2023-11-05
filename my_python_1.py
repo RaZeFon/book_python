@@ -1230,6 +1230,79 @@ print(s[-3:-8:-2])
 s = "ПТЕРОДАКТИЛЬ"
 print(s[-5::-3])
 """
+"""
+s = "ПАРАД"
+print(s[:1])
+print(s[:2])
+print(s[:3])
+print(s[:4])
+print(s)
+"""
+"""
+s = "ДОКЛАД"
+print(" " * 5 + s[-1])
+print(" " * 4 + s[-2:])
+print(" " * 3 + s[-3:]) 
+print(" " * 2 + s[-4:])
+print(" " + s[-5:])
+print(s)
+"""
+"""
+s = "ПИРАМИДКА"
+print(" " * 4 + s[4])
+print(" " * 3 + s[3:6])
+print(" " * 2 + s[2:7])
+print(" " + s[1:8])
+print(s)
+"""
+"""
+word = "ПАРАД"
+for i in range(len(word) + 1):
+    print(word[:i])
+"""
+"""
+word = "ДОКЛАД"
+size = len(word)
+for i in range(len(word)):
+    print(" " * (size - 1) + word[len(word) - 1 - i:])
+    size -= 1
+"""
+"""
+word = "ПИРАМИДКА"
+size = len(word) // 2
+string = word[len(word) // 2]
+print(" " * size + string)
+for i in range(len(word) // 2):
+    string = word[len(word) // 2 - i - 1] + string + word[len(word) // 2 + i + 1]
+    print(" " * (size - 1) + string)
+    size -= 1
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
