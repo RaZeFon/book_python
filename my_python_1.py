@@ -1277,6 +1277,40 @@ for i in range(len(word) // 2):
     print(" " * (size - 1) + string)
     size -= 1
 """
+"""
+#Словесная архитектура
+print("ЗАДАЧА 1")
+s = input("Слово: ")
+for i in range(len(s)):
+    print(s[:i + 1])
+"""
+"""
+print("\nЗАДАЧА 2")
+s = input("Слово: ")
+for i in range(1, len(s) + 1):
+    print("=" * (len(s) - i), s[len(s) - i:])
+"""
+"""
+print("\nЗАДАЧА 3")
+s = input("Слово: ")
+t = len(s) // 2 
+for i in range(t + 1):
+    print(" " * (t - i), s[t - i:t + i + len(s) % 2])
+"""
+
+word_1 = input("Первое слово: ")
+word_2 = input("Второе слово: ")
+word_1 = word_1.upper()
+word_2 = word_2.upper()
+count = 0
+for i in range(len(word_1)):
+    for j in range(len(word_2)):
+        if word_1[i] == word_2[j]:
+            #print(" " * (j - 1) + word_1)
+            print(word_2[:j] + word_1[i] + word_2[j + 1:])
+print(" " * (j - 1) + word_1)            
+            
+            
 
 
 
