@@ -1407,6 +1407,59 @@ while True:
     x = x + 1
 print(x)
 """
+"""
+#Словесная архитектура
+print("ЗАДАЧА 1")
+s = input("Слово: ")
+for i in range(len(s)):
+    print(s[:i + 1])
+"""
+"""
+print("\nЗАДАЧА 2")
+s = input("Слово: ")
+for i in range(1, len(s) + 1):
+    print("=" * (len(s) - i), s[len(s) - i:])
+"""
+"""
+print("\nЗАДАЧА 3")
+s = input("Слово: ")
+t = len(s) // 2 
+for i in range(t + 1):
+    print(" " * (t - i), s[t - i:t + i + len(s) % 2])
+"""
+
+         
+            
+            
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+>>>>>>> 2f27f794e3d0da344b15f132867eb585f72b6a03
 
 
 
