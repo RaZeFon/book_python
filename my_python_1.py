@@ -1277,34 +1277,136 @@ for i in range(len(word) // 2):
     print(" " * (size - 1) + string)
     size -= 1
 """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+"""
+s = input("Слово 1: ")
+w = input("Слово 2: ")
+c = 0
+for i in range(len(s)):
+    j = w.find(s[i])
+    if j >= 0:
+        c = c + 1
+        print()
+        for k in range(len(s)):
+            if k != i:
+                print(" " * j + s[k])
+            else:
+                print(w)
+print("\nНайдено вариантов:", c)
+"""
+"""
+import random
+result = ""
+array_question = ["Несколько цифр соединённых вместе?", "Книга с картами?", "Сжатая ладонь?", "Это клеят на конверты?",
+                "Создатель творения по другому?", "Из них состоит твоя причёска?"]
+array_anagram = ["ЧИСЛА", "АТЛАС", "КУЛАК", "МАРКА", "АВТОР", "ВОЛОСЫ"]
+value = random.randint(0, 6)
+list_anagram = list(array_anagram[value])
+random.shuffle(list_anagram)
+for i in range(len(list_anagram)):
+    result = result + list_anagram[i]
+print(f"Составьте анаграмму из буков? ")
+print(f"{array_question[value]} {result}")
+anagram = input(">>> ")
+if array_anagram[value] == anagram.upper():
+    print("Поздравляю вы составили правильное слово")
+else:
+    print("Это слово не подходит")
+"""
+"""
+#Анаграммы
+import random
+import time
+u5 = ["ШКОЛА", "ЛОЖКА", "КОСЯК", "ЗАИКА", "ПИРОГ", "ПЕРЕЦ", "КНИГА",
+      "ВЕНИК", "МАСКА", "КОМАР", "ТРОПА", "ТРУБА", "ШЛАНГ", "СТРАХ",
+      "УЖАС", "ИДЕЯ", "БОКС", "КРУГ", "ПОЭТ", "КУЧА", "ОЧКИ", "СМЕХ",
+      "МЕЧТА", "ОАЗИС", "ВЕСЛО", "МАЛИНА", "КОЛЕСО", "ПРОКОЛ", "КОМПАС",
+      "БУБЛИК", "ЯГОДА", "СКАЗКА", "УДАЧА"]
+u7 = ["ПРИЧУДА", "СКУЛЬПТОР", "КАСТРЮЛЯ", "ЧЕХАРДА", "САМОВАР",
+      "ПОЛИЦИЯ", "МОРОЖЕНОЕ", "КОРАБЛЬ", "ПРИНЦЕССА", "ТАРАКАН",
+      "ВАРЕНЬЕ", "ИГРУШКА", "БУДИЛЬНИК", "БАРАБАН", "ДВОРНИК",
+      "БАКЛАЖАН", "ПРЕСТУПНИК", "КРАПИВА", "КОТЛЕТА", "ОПИСАНИЕ",
+      "СЕКУНДА", "ПОПУГАЙ", "КОМПЬЮТЕР", "ВЕРБЛЮД", "БАССЕЙН"]
+print("@" * 50)
+print("         ", end = '')
+for b in "АНАГРАММЫ":
+    print(b + "   ", end = '')
+    time.sleep(0.5)
+print("\n" + "@" * 50)
+n = input("Выберите уровень: 0 - лёгкий, не 0 - трудный: ")
+if n == "0":
+    u = u5
+else:
+    u = u7
+random.shuffle(u)
+ball = 0
+for i in range(10):
+    print("Анаграмма", str(i + 1) + ":")
+    s = list(u[i])
+    random.shuffle(s)
+    w = ""
+    for z in s:
+        w += z
+    print(w)
+    otv = input("Ответ: ")
+    if otv == u[i]:
+        ball += len(w)
+print("Набрано баллов: ", ball)
+"""
+"""
+import random
+result = ""
+array_anagram2 = ["ПРИЧУДА", "СКУЛЬПТОР", "КАСТРЮЛЯ", "ЧЕХАРДА", "САМОВАР",
+      "ПОЛИЦИЯ", "МОРОЖЕНОЕ", "КОРАБЛЬ", "ПРИНЦЕССА", "ТАРАКАН"]
+array_anagram1 = ["ЧИСЛА", "АТЛАС", "КУЛАК", "МАРКА", "АВТОР", "ВОЛОСЫ"]
+complexity = input(f"{"-" * 50}\nВыберите сложность, 0 - легко, не 0 - трудно: ")
+if complexity == 0:
+    array_anagram = array_anagram1
+else:
+    array_anagram = array_anagram2
+value = random.randint(0, 6)
+list_anagram = list(array_anagram[value])
+random.shuffle(list_anagram)
+for i in range(len(list_anagram)):
+    result = result + list_anagram[i]
+print(f"{"@" * 50} \n{" " * 8}И Г Р А    В    А Н А Г Р А М М Ы\n{"@" * 50}")
+print(f"\n{" " * 10}Составьте анаграмму из буков?\n{"-" * 50}")
+print(f">>> {result}")
+anagram = input(">>> ")
+if array_anagram[value] == anagram.upper():
+    print(f"\n{" " * 5}Поздравляю вы составили правильное слово\n{"-" * 50}")
+else:
+    print(f"\n{" " * 13}Это слово не подходит\n{"-" * 50}")
+"""
+"""
+s = "ПРИВЕТ"
+print(s[:2] + "!")
+"""
+"""
+n = int(input("Введите натуральное число: "))
+s = str(n + 4) + str(n + 2) + str(n) + str(n + 1) + str(n + 3)
+print("Ответ:", s)
+"""
+"""
+t = input().split()
+name = t[0]
+height = int(t[1])
+veight = float(t[2])
+print(f"{veight} {height} {name}")
+"""
+"""
+n = int(input())
+x = 1
+while True:
+    xx = x
+    p = 1
+    while xx > 0:
+        p = p * (xx % 10)
+        xx = xx // 10
+    if p == n:
+        break
+    x = x + 1
+print(x)
+"""
 
 
 
