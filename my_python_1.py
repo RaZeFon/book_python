@@ -1427,10 +1427,48 @@ t = len(s) // 2
 for i in range(t + 1):
     print(" " * (t - i), s[t - i:t + i + len(s) % 2])
 """
+"""
+#Лотерея
+### ПЕРЕД ОТПРАВКОЙ КОДА НА ПРОВЕРКУ УДАЛИТЬ КОММЕНТАРИИ!
+n = int(input())
+cubs = [] #список кубов, меньших 1000
+for i in range(10):
+    cubs.append(i * i * i)
+c = 0
+for i in range(n):
+    if int(input()) % 1000 in cubs:
+        c += 1
+print(c)
+"""
+"""
+###А можно то же самое записать вот так:
+cubs = [i**3 for i in range(10)]
+print(sum(1 if int(input()) % 1000 in cubs else 0 for i in range(int(input()))))
+"""     
+"""
+# Произведение цифр
+n = int(input())
+s = ""
+k = 9
+while k > 1:
+  if n % k == 0:
+    s = str(k) + s
+    n //= k
+  else:
+    k -= 1
+if n == 1:
+  print(s)
+else:
+  print("-1")
+"""
 
-         
-            
-            
+# Купание слона Васи
+a = 500
+b = 1000
+x = int(input())
+print(a*b*x//1000)
+#А вот решение Пайтона:
+print(500*int(input()))
 
 
 
@@ -1451,15 +1489,6 @@ for i in range(t + 1):
 
 
 
-
-
-
-
-
-
-
-
->>>>>>> 2f27f794e3d0da344b15f132867eb585f72b6a03
 
 
 
