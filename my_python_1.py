@@ -1461,7 +1461,7 @@ if n == 1:
 else:
   print("-1")
 """
-
+"""
 # Купание слона Васи
 a = 500
 b = 1000
@@ -1469,18 +1469,73 @@ x = int(input())
 print(a*b*x//1000)
 #А вот решение Пайтона:
 print(500*int(input()))
+"""
+"""
+groups = 0
+print("Фомрирование команд")
+girls_D = int(input("Сколько у нас девочек: "))
+boys_M = int(input("Склько у нас мальчиков: "))
+dog_S = int(input("Сколько у нас собак: "))
+cat_K = int(input("Сколько у нас кошек: "))
+animals = dog_S + cat_K
+while True:
+    if girls_D > 0 and boys_M > 0 and animals > 0:
+        girls_D -= 2
+        boys_M -= 3
+        animals -= 1
+        if girls_D < 0 and boys_M < 0 and animals < 0:
+            break
+        groups += 1
+    else:
+        break
+print("Количество сформированых групп:", groups)
+"""
+"""
+# Команды на Гонку Героев
+s = input().split()# Ввод через пробел - нужен split()
+d = int(s[0])
+m = int(s[1])
+ks = int(s[2])+int(s[3]) # Сразу сложим кошек и собак
+print(min(d//2, m//3, ks))
+"""
+"""
+spisok = input("Введите значение через пробел (мальчиков, девочек, собак и кошек): ").split()
+boys = int(spisok[0])
+girls = int(spisok[1])
+animals = int(spisok[2]) + int(spisok[3])
+print(f"Количество сформированых групп {min(boys // 3, girls // 2, animals)}")
+"""
+"""
+grade_count_five = 0
+grade_count = 10
+summa = 20
+print("Двоишник Сидоров хочет тройку за четверть\nСколькое ему нужно получить пятёрок?")
+average_arithmetic = 0
+while average_arithmetic <= 2.5:
+    grade = int(input("Ввести оценку: "))
+    summa += grade
+    grade_count += 1
+    if grade == 5:
+        grade_count_five += 1
+    average_arithmetic = summa / grade_count
+print(f"Оценка за четверть {round(average_arithmetic)}. Сидоров получил пятерок {grade_count_five}")
+"""
 
+# Получить тройку
+n = int(input())
+s = 0 # Сумма оценок
+p = 0 # Количество пятёрок
+for i in range(n):
+    s += int(input())
+while s / (p + n) < 2.5: # Пока средний балл меньше 2.5
+    p += 1
+    s += 5
+print(p)
 
-
-
-
-
-
-
-
-
-
-
+Таким образом, цикл будет выполняться до тех пор, пока средний балл
+не станет больше или равным 2.5. Когда это произойдет, цикл завершится,
+и мы выведем значение переменной `p`, которая будет содержать количество
+пятёрок, необходимых для достижения среднего балла 2.5.
 
 
 
