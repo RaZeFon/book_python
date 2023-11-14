@@ -1532,6 +1532,45 @@ while s / (p + n) < 2.5: # Пока средний балл меньше 2.5
     s += 5
 print(p)
 """
+"""
+p = float(input()) #
+a = float(input()) #в раз тяжелее
+b = float(input()) #в раз больше еды
+print(p * a * b)
+"""
+"""
+print(float(input())*float(input())*float(input()))
+"""
+"""
+# Нарушители самоизоляции
+n = int(input())
+f = 1
+for k in range(1, n+1):
+    f *= k # Да, это факториал:)
+print(f)
+"""
+"""
+violators = int(input("Сколько нарушителей: "))
+result = 1
+for i in range(1, violators + 1):
+    result *= i
+print("Максимальное количество раз которое им может сопутствовать удача:", result)
+"""
+"""
+#Пукка Юкконен
+n = int(input())
+a = []
+z = 4*n #количество секций, если участки не граничат
+for i in range(n):
+    x, y = input().split()
+    a.append([int(x), int(y)])
+    for j in range(i): #не граничит ли с уже введёнными участками?
+        if a[i][0]==a[j][0] and abs(a[i][1]-a[j][1])==1:
+            z-=2
+        if a[i][1]==a[j][1] and abs(a[i][0]-a[j][0])==1:
+            z-=2
+print(z)
+"""
 
 
 
@@ -1540,6 +1579,28 @@ print(p)
 
 
 
+
+
+
+
+
+
+
+
+
+
+
+import random
+value = input("Размер участка в км в квадрате?\nИ количество участков во владении?\nВведите через пробел >>> ").split()
+size = int(value[0])
+count_plot = int(value[1])
+array = []
+fence = size * 4
+for i in range(count_plot):
+    number_X = int(input("Введите первую координату участка: "))
+    number_Y = int(input("Введите втовую координату участка: "))
+    array.append(number_X, number_Y)
+print(array)
 
 
 
