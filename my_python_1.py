@@ -1571,36 +1571,39 @@ for i in range(n):
             z-=2
 print(z)
 """
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-import random
+"""
 value = input("Размер участка в км в квадрате?\nИ количество участков во владении?\nВведите через пробел >>> ").split()
 size = int(value[0])
 count_plot = int(value[1])
 array = []
-fence = size * 4
+fence = count_plot * 4
 for i in range(count_plot):
-    number_X = int(input("Введите первую координату участка: "))
-    number_Y = int(input("Введите втовую координату участка: "))
-    array.append(number_X, number_Y)
-print(array)
+    number_X, number_Y = input("Ведите значения X и Y через пробел: ").split()
+    array.append([int(number_X), int(number_Y)])
+    for j in range(i):
+        if array[i][0] == array[j][0] and abs(array[i][1] - array[j][1]) == 1:
+            fence -= 2
+        if array[i][1] == array[j][1] and abs(array[i][0] - array[j][0]) == 1:
+            fence -= 2
+print(fence * size)
+"""
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
