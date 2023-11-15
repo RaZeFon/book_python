@@ -1587,6 +1587,30 @@ for i in range(count_plot):
             fence -= 2
 print(fence * size)
 """
+"""
+# Меньше жрать!
+n = int(input())
+p = [] # Прожорливости
+v = [] # Веса
+r = "YES"
+for i in range(n):
+    s = input().split()
+    p.append(int(s[0]))
+    v.append(int(s[1]))
+    for j in range(i):
+        if (p[i] - p[j]) * (v[i] - v[j]) < 0:
+            # Если у разностей весов и прожорливостей разные знаки
+            r = "NO"
+            break
+print(r)
+"""
+
+quantity_houses = int(input("Сколько домов посетить: "))
+right_houses = 0
+array_houses = []
+for i in range(quantity_houses):
+    x, y = input("Введите координату X и Y через пробел : ").split()
+    array_houses.append([])
 
 
 
@@ -1605,9 +1629,20 @@ print(fence * size)
 
 
 
-
-
-
-
-
-
+"""
+# Тимуровцы
+### ПЕРЕД ОТПРАВКОЙ КОДА НА ПРОВЕРКУ УДАЛИТЬ КОММЕНТАРИИ!
+n = int(input())
+lst = [] # Список пар координат
+for i in range(n):
+    x, y = input().split()
+    lst.append([x, y])
+c = 0 # Счётчик точек, у которых обе координаты уникальны
+for i in range(n):
+    c += 1
+    for j in range(n):
+        if i != j and (lst[i][0] == lst[j][0] or lst[i][1] == lst[j][1]):
+            c -= 1
+            break
+print(c)
+"""
