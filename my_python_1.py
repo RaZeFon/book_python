@@ -1604,31 +1604,21 @@ for i in range(n):
             break
 print(r)
 """
-
+"""
 quantity_houses = int(input("Сколько домов посетить: "))
 right_houses = 0
 array_houses = []
 for i in range(quantity_houses):
     x, y = input("Введите координату X и Y через пробел : ").split()
-    array_houses.append([])
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    array_houses.append([x, y])
+for i in range(quantity_houses):
+    right_houses += 1
+    for j in range(quantity_houses):
+        if i != j and (array_houses[i][0] == array_houses[j][0] or array_houses[i][1] == array_houses[j][1]):
+            right_houses -= 1
+            break
+print(right_houses)
+"""
 """
 # Тимуровцы
 ### ПЕРЕД ОТПРАВКОЙ КОДА НА ПРОВЕРКУ УДАЛИТЬ КОММЕНТАРИИ!
@@ -1646,3 +1636,23 @@ for i in range(n):
             break
 print(c)
 """
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
