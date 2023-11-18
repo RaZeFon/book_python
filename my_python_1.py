@@ -1636,6 +1636,156 @@ for i in range(n):
             break
 print(c)
 """
+"""
+time = 0
+time_finding = 10
+start_temp = int(input("Введите начальную температуру контрастного душа: "))
+temp_1, temp_2 = (input("Введите температуру холодной и горячей воды: ")).split()
+temp_min, temp_max = min(int(temp_1), int(temp_2)), max(int(temp_1), int(temp_2))
+count_temp = 1
+result_temp_1 = start_temp
+result_temp_2 = start_temp
+while True:
+    result_temp_1 -= count_temp
+    result_temp_2 += count_temp
+    if result_temp_1 <= temp_min or result_temp_2 >= temp_max:
+        print(f"Время контрастного душа в секундах {time}")
+        break
+    time += time_finding
+    count_temp += 1
+"""
+"""
+# Контрастный душ
+x = int(input())
+h = int(input())
+g = int(input())
+print (10 * (1 + (g - h) // x))
+# Сосчитали максимальное количество интервалов длины x в диапазоне температур
+"""
+"""
+time = 0
+time_finding = 10
+start_temp = int(input("Введите начальную температуру контрастного душа: "))
+temp_1, temp_2 = (input("Введите температуру холодной и горячей воды: ")).split()
+temp_min, temp_max = min(int(temp_1), int(temp_2)), max(int(temp_1), int(temp_2))
+count_temp = 1
+result_temp_1 = start_temp
+result_temp_2 = start_temp
+while True:
+    result_temp_1 -= count_temp
+    result_temp_2 += count_temp
+
+    if result_temp_1 != temp_min:
+        time += time_finding
+
+    if result_temp_2 != temp_max:
+        time += time_finding
+        
+    else:
+        print(f"Время контрастного душа в секундах {time}")
+        break
+
+    count_temp += 1
+"""
+"""
+print("+" + "=" * 10 + "+")
+print("|" + " " * 10 + "|")
+print("|" + " " * 3 + "#" * 4 + " " * 3 + "|")
+print("|" + " " + "#" * 4 + "*" + "#" * 2 + " " * 2 + "|")
+print("|" + " " * 2 + ">" + "-" + "#" * 4 + " " * 2 + "|")
+print("|" + " " * 3 + "#" * 4 + " " * 3 + "|")
+print("|" + " " * 4 + "#" * 3 + " " * 3 + "|")
+print("|" + " " * 5 + "#" * 3 + " " * 2 + "|")
+print("|" + " " * 6 + "#" * 2 + " " * 2 + "|") 
+print("|" + " " + "#" + " " * 5 + "#" * 2 + " " + "|")
+print("|" + " " * 2 + "#" + " " * 3 + "#" * 2 + " " * 2 + "|")
+print("|" + " " * 3 + "#" * 4 + " " * 3 + "|")
+print("|" + " " * 10 + "|")
+print("+" + "=" * 10 + "+")
+"""
+"""
+print("+==========+")
+print("|          |")
+print("|   ####   |")
+print("| ####*##  |")
+print("|  >-####  |")
+print("|   ####   |")
+print("|    ###   |")
+print("|     ###  |")
+print("|      ##  |")
+print("| #     ## |")
+print("|  #   ##  |")
+print("|   ####   |")
+print("|          |")
+print("+==========+")
+"""
+"""
+import time
+print("=" * 4 +" Время: ОТ и ДО " + "=" * 4)
+time.sleep(0.5)
+print("НАЧАЛО")
+hour_start = int(input("Часы: "))
+minutes_start = int(input("Минуты: "))
+time.sleep(0.5)
+print("КОНЕЦ")
+hour_end = int(input("Часы: "))
+minutes_end = int(input("Минуты: "))
+time.sleep(0.5)
+if hour_end > hour_start:
+    start_t = (hour_start * 60) + minutes_start
+    end_t = (hour_end * 60) + minutes_end
+    print(f"Длительность интервала времени {(end_t - start_t) // 60} час. {(end_t - start_t) % 60} мин.")
+elif hour_start == 24 and hour_end != 24:
+    hour_end = 24 + hour_end
+    start_t = (hour_start * 60) + minutes_start
+    end_t = (hour_end * 60) + minutes_end
+    print(f"Длительность интервала времени {(end_t - start_t) // 60} час. {(end_t - start_t) % 60} мин.")
+elif hour_end == hour_start:
+    if minutes_start > minutes_end:
+        print("Вы неправильно указали минуты")
+    else:
+        start_t = (hour_start * 60) + minutes_start
+        end_t = (hour_end * 60) + minutes_end
+        print(f"Длительность интервала времени {(end_t - start_t) // 60} час. {(end_t - start_t) % 60} мин.")
+else:
+    print("Ввели не в том порядке!")
+"""
+"""
+#Проект "Время: от и до"
+print("==== Время: ОТ и ДО ====")
+print("НАЧАЛО")
+h1 = int(input("Часы: "))
+m1 = int(input("Минуты: "))
+print("КОНЕЦ")
+h2 = int(input("Часы: "))
+m2 = int(input("Минуты: "))
+t1 = 60 * h1 + m1 #начало - в минутах от начала суток
+t2 = 60 * h2 + m2 #конец - в минутах от начала суток
+m = t2 - t1
+hh = m // 60
+mm = m % 60
+print ("Длительность интервала времени", hh, "час.", mm, "мин.")
+"""             
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
