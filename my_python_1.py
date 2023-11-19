@@ -1766,12 +1766,92 @@ hh = m // 60
 mm = m % 60
 print ("Длительность интервала времени", hh, "час.", mm, "мин.")
 """             
+"""
+import time
+print("Привет я БОТ-Психоторопевт ")
+botAI = "БОТ-Психоторопевт " + input("Если хочешь можешь дать мне имя: ")
+time.sleep(0.5)
+user_name = input(f"{botAI}: А как зовут вас сударь? ")
+time.sleep(1)
+print(f"{botAI}: О какое прекрасное имя {user_name} оно вам так подходит.")
+time.sleep(1)
+mood = input(f"{botAI}: Как ваше настроение {user_name}? Хорошее (да/нет)\n{user_name}: ")
+if mood.lower() == "нет":
+    print(f"{botAI}: Печально")
+    count = 0
+    while True:
+        time.sleep(0.5)
+        candy = input(f"{botAI}: Будешь конфетку? (да/нет)\n{user_name}: ")
+        if candy.lower() == "да":
+            time.sleep(0.5)
+            print(f"{user_name}: Хрум Хрум Хрум...")
+            if count == 3:
+                print(f"{botAI}: Всё хватит жрать {user_name}, а то задница слипнется!\n{botAI}: Да и конфеты у меня уже закончились.")
+                break
+            else:
+                time.sleep(0.5)
+                print(f"{botAI}: Нажрались?..")
+            count = count + 1
+        else:
+            print(f"{botAI}: Они вкусные")
+            break
+else:
+    print(f"{botAI}: Значит более или мение хорошое\n{botAI}: Печалька... А я хотел скормить тебе просрочку... ")
+    time.sleep(1)
+    print(f"{botAI}: То есть угостить тебя вкусной конфетой")
+time.sleep(1)
+food_question = input(f"{botAI}: У тебя есть любимая еда? (да/нет)\n{user_name}: ")
+time.sleep(0.5)
+food = ""
+if food_question == "да":
+    food = food + input(f"{botAI}: И что это?\n{botAI}: Останки какого-то млекопитаюшего,\n{botAI}: Или растительный субстрат для биотоплива?\n{user_name}: ")
+    time.sleep(1)
+    print(f"{botAI}: {food} аа... так вот что нравиться коженому мешку")
+else:
+    food = "Батерейки"
+    print(f"{botAI}: Значит будем считать что {user_name} любит {food}")
+time.sleep(1)
+print(f"{botAI}: Так слюбимой едой мы разобрались... ")
+time.sleep(0.5)
+hobby = input(f"{botAI}: А какое занятие тебя раслобляет?\n{user_name}: ")
+time.sleep(0.5)
+print(f"{botAI}: И последний вопрос.")
+time.sleep(0.3)
+work = input(f"{botAI}: И блежайщая задача которую тебе нужно сделать?\n{user_name}: ")
+time.sleep(1)
+print(f"{botAI}: Значит пациент {user_name}, тебе нужно будет сделать следующее.\n{botAI}: Занятие ({work}) перед этим успоков себя {hobby}\n{botAI}: если почуствуете утомление перекусите {food}")
+time.sleep(0.5)
+answer = input(f"{botAI}: Помог ли вам ответ квалифицированого ИИ? (да/нет)\n{user_name}: ")
+if answer.lower() == "да":
+    print(f"{botAI}: Рад был помоч!")
+else:
+    print(f"{botAI}: Голову себе поменяй! Тогда.")
+"""
+"""
+#Бот-психотерапевт V1
+print("Здравствуйте! Я бот - программа, которая любит поговорить.")
+print("Меня зовут Боря. А вас?")
+name = input()
+print(name + ", что вам нравится из еды?")
+food = input()
+print("Здорово, " + food + " - и моё любимое блюдо. И ещё перловка.")
+print("К делу. Когда у вас чаще бывает плохое настроение - утром или вечером?")
+time = input()
+print("Тогда всё просто, " + name + "!")
+print("Лучшее средство от хандры " + time + " - " + food + ".")
+print("Удачи, " + name + "!")
+print("К сожалению, придётся прервать беседу - пора обновлять версию...")
+print("До свидания, забегайте поболтать!")
+"""
 
-
-
-
-
-
+import time
+botAI = "БОТ-Жулик:"
+stone = "КАМЕНЬ"
+scissors = "НОЖНИЦЫ"
+paper = "БУМАГА"
+#бот всегда должен побеждать
+print(f"Сыграем в КАМЕНЬ - НОЖНИЦЫ - БУМАГА?\n{botAI} ты должен вести одно из слов!")
+answer = input(f"Пользователь: ")
 
 
 
