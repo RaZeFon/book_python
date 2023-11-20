@@ -1843,7 +1843,7 @@ print("Удачи, " + name + "!")
 print("К сожалению, придётся прервать беседу - пора обновлять версию...")
 print("До свидания, забегайте поболтать!")
 """
-
+"""
 import time
 botAI = "БОТ-Жулик:"
 stone = "КАМЕНЬ"
@@ -1852,18 +1852,121 @@ paper = "БУМАГА"
 #бот всегда должен побеждать
 print(f"Сыграем в КАМЕНЬ - НОЖНИЦЫ - БУМАГА?\n{botAI} ты должен вести одно из слов!")
 answer = input(f"Пользователь: ")
-
-
-
-
-
-
-
-
-
-
-
-
+time.sleep(1)
+print("РАЗ!")
+time.sleep(1)
+print("ДВА!")
+time.sleep(1)
+print("ТРИ!")
+time.sleep(1)
+if answer.upper() == paper:
+    print(f"{botAI} У меня {scissors}")
+elif answer.upper() == scissors:
+    print(f"{botAI} У меня {stone}")
+elif answer.upper() == stone:
+    print(f"{botAI} У меня {paper}")
+else:
+    print("У меня ошушение, что ты что-то не понял")
+time.sleep(0.3)
+print(f"{botAI} Я победил !!! :)))")
+"""
+"""
+k = "КАМЕНЬ"
+n = "НОЖНИЦЫ"
+b = "БУМАГА"
+print("Сыграем в КАМЕНЬ-НОЖНИЦЫ-БУМАГА?")
+print("По команде РАЗ-ДВА-ТРИ ты должен ввести одно из слов:")
+print(k, n, b, sep = "\n") #sep - разделитель (если нужен не пробел)
+input("Если готов - нажми Enter.")
+p = input("РАЗ! ДВА! ТРИ!:  ")
+if p == k:
+    c = b
+elif p == n:
+    c = k
+elif p == b:
+    c = n
+else:
+    c = "ощущение, что ты что-то не понял"
+print("У меня", c)
+print("Я победил! :)))))")
+"""
+"""
+botAI = "БОТ-Руководитель:"
+#БОТ-Руководитель
+print("Поручение работ по способностям и наклонастям.")
+surname = input("Фамилия волонтера? ")
+if "Д".lower() == input(f"{botAI} Ты мальчик или девочка? (д/м)\n{surname}: "):
+    answer1 = "иди работать в здание"
+else: 
+    answer1 = "работаеш на улице"
+if "ДА".lower() == input(f"{botAI} Знаешь как этим пользоваться? (да/нет)\n{surname}: "):
+    answer2 = "возьми инструмент в подсобке"
+else:
+    answer2 = "будешь работать руками"
+if "ДА".lower() == input(f"{botAI} Маме с Папой помогаете (да/нет)\n{surname}: "):
+    answer3 = "двойную работу"
+else:
+    answer3 = "двойную работу под моим присмотром"
+print(f"{botAI} Значит так товаришь {answer1}, и {answer2}. А сделать тебе нужно {answer3}!")
+"""
+"""
+pol = input("Ты мальчик или девочка? Под пуховиком не видно. (М/Д): ")
+um = input("Сколько будет 7 * 11 * 13?: ")
+if um == "1001":
+    if pol == "Д":
+        print("Умница! Будешь грамоты заполнять.")
+    else:
+        print("Больно умный! Будешь стоять на развилке и показывать, кому куда ехать.")
+else:
+    sn = input("Снегоход водить умеешь? (ДА/НЕТ): ")
+    ban = input("А бананы любишь? (ДА/НЕТ): ")
+    if pol == "М" and sn == "ДА" and ban == "ДА":
+        print("Будешь ночью перед стартом трассу трамбовать.")
+    elif pol == "М" and sn == "ДА" and ban == "НЕТ":
+        print("Отлично, будешь на пункт питания бананы подвозить.")
+    elif pol == "М" and sn == "НЕТ"and ban == "ДА":
+        print("Будешь на пункте питания чай на костре греть.")
+    elif pol == "Д" and sn == "ДА":
+        print("Красава! Будешь вдоль трассы ездить и орать что-нибудь позитивное!")
+        if ban == "ДА":
+            print("Только к пункту питания не подъезжай.")
+    elif ban == "НЕТ":
+        print("Пойдёшь на пункт питания нарезать бананы.")
+    else:
+        print("Будешь на финишёров медали вешать. Только на это и годишься.")
+"""
+"""
+count_pattern = 0
+value_array = []
+pattern_array = ["##.##", "+#.#+", ".+#+."]
+for i in range(len(pattern_array)):
+    patter = int(input(f"Количество рядов {pattern_array[i]}: "))
+    value_array.append(patter)
+    count_pattern += patter
+print(f"Количество рядов в узоре = {count_pattern}")
+repeat = int(input("Сколько раз повторить узор? "))
+for j in range(repeat):
+    for i in range(len(pattern_array)):
+        for k in range(value_array[i]):
+            print(pattern_array[i])
+"""
+"""
+a = "##.##"
+b = "+#.#+"
+c = ".+#+."
+na = int(input("Количество рядов " + a + ": "))
+nb = int(input("Количество рядов " + b + ": "))
+nc = int(input("Количество рядов " + c + ": "))
+print("Количество рядов в узоре:", na + nb + nc)
+n = int(input("Сколько раз повторить узор?: "))
+for i in range(n):
+    for k in range(na):
+        print(a)
+    for k in range(nb):
+        print(b)
+    for k in range(nc):
+        print(c)     
+"""
 
 
 
