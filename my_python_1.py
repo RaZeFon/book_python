@@ -1967,8 +1967,91 @@ for i in range(n):
     for k in range(nc):
         print(c)     
 """
+"""
+a = int(input("Введите начало интервала: "))
+b = int(input("Введите конец интервала: "))
+d = int(input("Введите требуемое количество делителей: "))
+v = input("Выводить делители? (ДА/НЕТ): ")
+count = 0
+md = 0
+for x in range(a, b + 1):
+    c = 0
+    s = "Делители:"
+    for j in range(1, x + 1):
+        if x % j == 0:
+            c += 1
+            s += " " + str(j)
+    if c == d:
+        count += 1
+        print(x)
+        if v == "ДА":
+            print(s)
+    if c > md:
+        md = c
+print("Чисел с числом делителей", d, ":", count)
+print ("Наибольшее количество делителей у числа из диапазона:", md)
+"""
+"""
+# Игра "5 букв"
+word_to_gues = list("метро") # ["м", "е", "т", "р", "о"]
+lives = 5
+guesed_ltr = []
+available_ltrs = [chr(i) for i in range(1072, 1104)]
+revealed_ltr = ["*" for _ in range(len(word_to_gues))] # ["*", "*", "*", "*", "*"]
 
+game_is_on = True
 
+while game_is_on:
+    print("Выберите букву, допустимые буквы: ")
+    print(available_ltrs)
+
+    chr = ""
+    while chr not in available_ltrs:
+        chr = input("Введите букву из представленных выше! ")
+    guesed_ltr.append(chr)
+    available_ltrs.remove(chr)
+    
+    if chr in word_to_gues:
+        print("Вы угадали, такая буква есть!")
+        idx = word_to_gues.index(chr)
+        revealed_ltr[idx] = chr
+    else:
+        lives -= 1
+        print(f"##### Вы не угадали! Осталось жизней {lives}  #####")
+
+    if lives <= 0:
+        print("Вы потратили все жизни! А следовательно автомобиль вы не выиграли!")
+        break
+    
+    if revealed_ltr == word_to_gues:
+        game_is_on = False
+else:
+    print("Вы выиграли! Слово:", word_to_gues)
+"""
+#"""
+a = int(input("Введите начало интервала: "))
+b = int(input("Введите конец интервала: "))
+d = int(input("Введите требуемое количество делителей: "))
+v = input("Выводить делители? (ДА/НЕТ): ")
+count = 0
+md = 0
+for x in range(a, b + 1):
+    c = 0
+    s = "Делители:"
+    for j in range(1, x + 1):
+        if x % j == 0:
+            c += 1
+            s += " " + str(j)
+    if c >= d:
+        count += 1
+        print(x)
+        if v == "ДА":
+            print(s)
+    if c > md:
+        md = c
+print("Чисел с числом делителей", d, ":", count)
+print("Наибольшее количество делителей у числа из диапазона:", md)
+#"""
 
 
 
