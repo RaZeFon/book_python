@@ -1992,6 +1992,77 @@ print("Чисел с числом делителей", d, ":", count)
 print ("Наибольшее количество делителей у числа из диапазона:", md)
 """
 """
+a = int(input("Введите начало интервала: "))
+b = int(input("Введите конец интервала: "))
+d = int(input("Введите требуемое количество делителей: "))
+v = input("Выводить делители? (ДА/НЕТ): ")
+count = 0
+md = 0
+for x in range(a, b + 1):
+    c = 0
+    s = "Делители:"
+    for j in range(1, x + 1):
+        if x % j == 0:
+            c += 1
+            s += " " + str(j)
+    if c >= d:
+        count += 1
+        print(x)
+        if v == "ДА":
+            print(s)
+    if c > md:
+        md = c
+print("Чисел с числом делителей", d, ":", count)
+print("Наибольшее количество делителей у числа из диапазона:", md)
+"""
+"""
+number_A = int(input("Введите A: "))
+number_B = int(input("Введите B: "))
+number_C = int(input("Введите C: "))
+number_D = int(input("Введите D: "))
+print("В каком интервале ищем X? ")
+start = int(input("Начало: "))
+end = int(input("Конец: "))
+
+for i in range(start, end + 1):
+    if number_A * i ** 3 + number_B * i ** 2 + number_C * i + number_D == 0:
+        print(f"x = {i}")
+        break
+"""
+"""
+numbers = input("Введите A,B,C,D через пробел: ").split()
+print("В каком интервале ищем X? ")
+interval = input("Введите НАЧАЛО и КОНЕЦ интервала через пробел: ").split()
+for i in range(int(interval[0]), int(interval[1]) + 1):
+    if int(numbers[0]) * i ** 3 + int(numbers[1]) * i ** 2 + int(numbers[2]) * i + int(numbers[3]) == 0:
+        print(f"x = {i}")
+        break
+"""
+"""
+#Решатель уравнений
+print("Решаем уравнения с целыми корнями,")
+print("с операциями, как в Python")
+print("    Пример: X ** 2 + 2 ** X = 170 + X")
+print("Введите уравнение c Х и с одним =:")
+ur = input()
+print("В каком интервале ищем Х?")
+a = int(input("Начало: "))
+b = int(input("Конец: "))
+c = 0 #счётчик найденных решений
+for x in range(a, b + 1):
+    # Превращаем х в строку и берём в скобки
+    strx = "(" + str(x)+ ")"
+    # Подставляем значение, делим на левую и правую части
+    s = ur.replace("X", strx).split("=") 
+    #print(s) #отладочная печать
+    n1 = eval(s[0])
+    n2 = eval(s[1])
+    if n1 == n2:
+        print("X =", x)
+        c += 1
+print("Найдено решений:", c)
+"""
+"""
 # Игра "5 букв"
 word_to_gues = list("метро") # ["м", "е", "т", "р", "о"]
 lives = 5
@@ -2028,41 +2099,6 @@ while game_is_on:
 else:
     print("Вы выиграли! Слово:", word_to_gues)
 """
-#"""
-a = int(input("Введите начало интервала: "))
-b = int(input("Введите конец интервала: "))
-d = int(input("Введите требуемое количество делителей: "))
-v = input("Выводить делители? (ДА/НЕТ): ")
-count = 0
-md = 0
-for x in range(a, b + 1):
-    c = 0
-    s = "Делители:"
-    for j in range(1, x + 1):
-        if x % j == 0:
-            c += 1
-            s += " " + str(j)
-    if c >= d:
-        count += 1
-        print(x)
-        if v == "ДА":
-            print(s)
-    if c > md:
-        md = c
-print("Чисел с числом делителей", d, ":", count)
-print("Наибольшее количество делителей у числа из диапазона:", md)
-#"""
-
-
-
-
-
-
-
-
-
-
-
 
 
 
