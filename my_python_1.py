@@ -2131,14 +2131,13 @@ for i in range(len(array_question)):
             count += 1
 print(f"Число неверных ответов: {count}")
 """
-
+"""
 # Универсальный тестер с вопросами из файла
 import codecs #так надо!
 import random #нужен для случайных реплик
 #Реплики одобрения и неодобрения
 ok = ["Верно", "Правильно", "ОК", ":)", "Именно так"]
 neok = ["Нет", "Неверно", "Ужасно", ":(", "Неправильно"]
-
 
 #ЧТЕНИЕ СПИСКА ВОПРОСОВ:
 filename = input("Введите имя файла: ")
@@ -2180,20 +2179,66 @@ for i in range(num):
 #Вывод результатов
 print("Верных ответов", prav, "из", num)
 print("Оценка:", (prav * 5) // num)
+"""
+"""
+import time
+import random
+array_divination = [
+    "Вас ожидает любовь с первого взгляда.",
+    "Вас ждет любовь, как в книге А.Грина «Алые паруса»",
+    "У предмета вашего увлечения много денег.",
+    "Вашу любовь будет сопровождать печаль.",
+    "Вас ожидает одна ночь страсти",
+    "Вы встретитесь в ресторане.",
+    "Вам предстоит любовь, как у Снегурочки и Мизгиря.",
+    "У вашего милого (милой) будут рыжие волосы.",
+    "Вы влюбитесь в начальника.",
+    "Ваша любовь превратится в привычку."
+]
+divination = "Предскозание от Веры Питоновны на сегодня!"
+cherta = "-" * len(divination)
+print(" " + cherta + "\n", divination + "\n", cherta)
+num = random.randint(0, 9)
+input(" Нажмите Enter чтобы продолжить: ")
+time.sleep(1)
+print(" ВЕРЧУ!")
+time.sleep(1)
+print(" КРУЧУ!")
+time.sleep(1)
+print(" ЗАПУТАТЬ ХОЧУ!")
+time.sleep(1)
+cherta = "-" * len(array_divination[num])
+print(" " + cherta + "\n", array_divination[num] + "\n", cherta)
+"""
 
+import random
+words_array = [
+    "РЫБА", "ЗОЛОТО", "ЧЕЛОВЕК", "РАЗУМ", "РОССИЯ"
+]
+words_affront = [
+    "ДУРОЧЁК", "ПРОСТОФИЛЯ", "ЛОБАТРЯС"
+]
+num_word = random.randint(0, len(words_array) - 1)
+num_affront = random.randint(0, len(words_affront) - 1)
+word_array_letter = list(words_array[num_word])
+word_array_aff_letter = list(words_affront[num_affront])
+new_array_1 = ["_" for i in range(len(word_array_letter))]
+new_array_2 = ["_" for j in range(len(word_array_aff_letter))]
+new_array_letter = []
+count_life = True
+#print(word_array_letter), print(word_array_aff_letter)
+print(new_array_1), print(new_array_2)
+#----------------------------------------------------------------
+while count_life:
+    letter = input("Введите букву: ")
+    for i in range(len(word_array_letter)):
+        if word_array_letter[i] == letter.upper():
+            new_array_1[i] = word_array_letter[i]
+            break 
+    if word_array_aff_letter        
+        new_array_2[i] = word_array_aff_letter[i]
 
-
-
-
-
-
-
-
-
-
-
-
-
+    print(new_array_1)
 
 
 
