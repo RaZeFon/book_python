@@ -2213,7 +2213,7 @@ print(" " + cherta + "\n", array_divination[num] + "\n", cherta)
 
 import random
 words_array = [
-    "РЫБА", "ЗОЛОТО", "ЧЕЛОВЕК", "РАЗУМ", "РОССИЯ"
+    "РЫБА", "АБРИКОС", "БАРОН", "РАЗУМ", "ВЕСНА"
 ]
 words_affront = [
     "ДУРОЧЁК", "ПРОСТОФИЛЯ", "ЛОБАТРЯС"
@@ -2224,21 +2224,26 @@ word_array_letter = list(words_array[num_word])
 word_array_aff_letter = list(words_affront[num_affront])
 new_array_1 = ["_" for i in range(len(word_array_letter))]
 new_array_2 = ["_" for j in range(len(word_array_aff_letter))]
-new_array_letter = []
-count_life = True
-#print(word_array_letter), print(word_array_aff_letter)
+count_life = 0
 print(new_array_1), print(new_array_2)
-#----------------------------------------------------------------
-while count_life:
+while count_life < len(word_array_aff_letter):
     letter = input("Введите букву: ")
     for i in range(len(word_array_letter)):
         if word_array_letter[i] == letter.upper():
             new_array_1[i] = word_array_letter[i]
-            break 
-    if word_array_aff_letter        
-        new_array_2[i] = word_array_aff_letter[i]
+            break
+    if new_array_1 == word_array_letter:
+        print("ТЫ ПОБЕДИЛ МОЛОДЕЦ !")
+        break 
+    if word_array_letter[i] != letter.upper():        
+        new_array_2[count_life] = word_array_aff_letter[count_life]
+        if new_array_2 == word_array_aff_letter:
+            print(f"Ты проиграл {new_array_2}")
+            break
+        count_life += 1
 
     print(new_array_1)
+    print(new_array_2)
 
 
 
