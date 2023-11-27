@@ -2210,7 +2210,7 @@ time.sleep(1)
 cherta = "-" * len(array_divination[num])
 print(" " + cherta + "\n", array_divination[num] + "\n", cherta)
 """
-
+"""
 import random
 words_array = [
     "РЫБА", "АБРИКОС", "БАРОН", "РАЗУМ", "ВЕСНА"
@@ -2244,6 +2244,44 @@ while count_life < len(word_array_aff_letter):
 
     print(new_array_1)
     print(new_array_2)
+"""
+"""
+#Игра "Виселица"
+import random
+#База слов (чем больше слов, тем лучше)
+w = ["ШЛАНГ", "ЧЕПУХА", "БЕГЕМОТ", "ИНФЕКЦИЯ", "ПРОГРАММИСТ"]
+#База обзывалок (их тоже лучше побольше насочинять)
+z = ["ЛОПУХ", "ТОРМОЗ", "РАЗЗЯВА", "БАЛДА"]
+print("ОТГАДЫВАЕМ СЛОВО:")
+print("!-?-!-?-!-?-!-?-!")
+slovo = random.choice(w)
+obz = random.choice(z)
+sl= "*" * len(slovo)
+ob = "*" * len(obz)
+h = 1    #счётчик ходов
+osh = 0  #счётчик ошибок
+while sl.count("*") > 0 and ob.count("*") > 0: #пока ни одно слово не открыто
+    print("=== Ход", h, "===")
+    print("Слово-загадка:     ", sl)
+    print("Слово-обзывалка:   ", ob)
+    b = input("Буква? ").upper()
+    if b in slovo: #если буква есть в слове
+        slc = "" #собираем новое отображение слова
+        for j in range(len(slovo)):
+            if slovo[j] == b:
+                slc += b
+            else:
+                slc += sl[j]
+        sl = slc
+    else:  #если буквы нет, открываем ещё одну букву в обзывалке
+        ob = ob.replace("*", obz[osh], 1)
+        osh += 1
+#финал игры
+if "*" in sl:
+    print("Вы проиграли. Вы -", obz)
+else:
+    print("С победой!")
+"""
 
 
 
