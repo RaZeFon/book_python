@@ -2282,8 +2282,18 @@ if "*" in sl:
 else:
     print("С победой!")
 """
-
-
+"""
+print("Введите уравнение с X и с одним =")
+string_equation = input("Введите уравнение: ").lower()
+interval = input("Введите начальное и конечное значение: ").split()
+for i in range(int(interval[0]), int(interval[1])):
+    equation = string_equation.replace("x", str(i)).split("=")
+    part1 = eval(equation[0])
+    part2 = eval(equation[1])
+    if part1 == part2:
+        print("x =", i)
+        break
+"""
 
 
 
