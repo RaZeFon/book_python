@@ -2294,13 +2294,86 @@ for i in range(int(interval[0]), int(interval[1])):
         print("x =", i)
         break
 """
+"""
+import codecs
+filename = input("Введите имя файла: ")
+f = codecs.open(filename, "r", "utf_8_sig")
+test = []
+n = 0
+for line in f:
+    test.append((line.rstrip()).split("#"))
+    n += 1
+f.close()
+print("Прочитано вопросов:", n)
+print(test)
+"""
+"""
+import codecs
+filename = input("Введите название файла: ")
+file = codecs.open(filename, "r", "utf_8_sig")
+test = []
+for line in file:
+    test.append((line.rstrip()).split("#"))
+file.close()
+prav = 0
+print(test[0][0])
+title = test.pop(0)
+size = len(test)
+cherta = "-" * len(title[0])
+for i in range(size):
+    print(f"Вопрос №: {i + 1}")
+    if test[i][1] == input(test[i][0]):
+        prav += 1
+        print("Верно")
+    else:
+        print("Неверно")
 
-
-
-
-
-
-
+print(cherta)
+print(f"Правильных ответов {prav}")
+"""
+"""
+s = input("Введите строку для зашифровки: ")
+w = ""
+for b in s:
+    w += chr(ord(b) + 1)
+print("Зашифровали", w)
+t = ""
+for b in w:
+    t += chr(ord(b) - 1)
+print("Расшифровали", t)
+"""
+"""
+#Шифровальная машина
+import codecs #это заклинание нужно для работы с кириллицей в файле
+text = input("Имя файла: ") #сам файл заранее делаем в Блокноте
+op = int(input("Шифрование - 1, дешифровка - 2: "))
+key = int(input("Ключ (натуральное число): ")) % 7 + 1
+key *=(3 - 2 * op) #для дешифровки ключ будет отрицательным
+#Делаем из файла список
+f = codecs.open(text, "r", "utf_8_sig")
+txt = [] #список вопросов пока пуст
+n = 0 #количество прочитанных строк
+for line in f: #для всех строк файла
+    txt.append(line.rstrip())
+    n += 1
+f.close()
+#Шифруем/дешифруем и помещаем в новый список
+cr = []
+for w in txt:
+    #print(w) #отладочная печать
+    s = ""
+    for b in w:
+        s += chr(ord(b) + key)
+    cr.append(s)
+    #print(s) #отладочная печать
+#Выгружаем в файл (к имени добавим "c_")
+g = codecs.open("c_" + text, "w", "utf_8_sig")
+for s in cr:
+    g.write(s + "\n")
+g.close()
+print("ОПЕРАЦИЯ УСПЕШНО ЗАВЕРШЕНА")
+print("Файл-результат:", "c_" + text)
+"""
 
 
 
