@@ -2732,15 +2732,6 @@ while x != xe or y != ye: # пока кораблик не достигнет ц
         break
 """  
 
-import random
-min_name_length = int(input("Минимальная длина имени: "))
-max_name_length = int(input("Максимальная длина имени: "))
-sogl = input("Доступные согласные: ")
-glas = input("Доступные гласные: ")
-sogl_row = int(input("Максимальное количество согласных подряд: "))
-glas_row = int(input("Максимальное количество гласных подряд: "))
-quantity_name = int(input("Количество имен: "))
-
 
 
 
