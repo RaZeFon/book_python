@@ -2763,11 +2763,169 @@ for k in range(q):
         name += b
     print("Имя", k + 1, name)
 """
+"""
+# Кассир
+# Уровень 1A
+d = [5000, 2000, 1000, 500, 200, 100, 50]
+s = int(input("Сумма к выдаче: "))
+if s % 50 > 0:
+    print("Выдача суммы невозможна")
+else:
+    for q in d:
+        t = s // q
+        if t > 0:
+            print(t, "по", q)
+            s = s - t * q
+"""
+"""
+# Кассир
+# Внимание! При некоторых сочетаниях номиналов программа работает некорректно.
+# Иногда она необоснованно заявляет, что выдать требуемую сумму нельзя.
+# Если сможете поумать такую ситуацию - будет здорово.
+# Если сможете описать общее правило, когда она возможна - будет круто.
+# Если сможете сделать программу, свбодную от этого недостатка - будет супер!
+# Уровень 4B
+print("== ЗАПРАВКА КАССОВОГО ЯЩИКА ==")
+d = [] # Содержимое кассы
+while True:
+    n = int(input("Номинал (0 для завершения ввода): "))
+    if n == 0:
+        break
+    q = int(input("Количество купюр номиналом " + str(n) + ": "))
+    d.append([n, q]) #записываем пару, номинал купюры и количество
+print("\n==== ОБСЛУЖИВАНИЕ КЛИЕНТОВ ====")
+d.sort(reverse = True) #сортируем по убыванию
+while True: # Цикл обслуживания клиентов
+    sq = 0
+    for q in d: # считаем наличность в кассе
+        sq += q[0]*q[1]
+    print("В кассе:", sq)
+    if sq == 0: # деньги кончились
+        break
+    s = int(input("Сумма к выдаче: "))
+    if s == 0: # клиенты кончились
+        break
+    else:
+        v = [] # количества выдаваемых купюр каждого номинала
+        for q in d:
+            t = min(s // q[0], q[1]) # Стараемся выдавать крупные купюры
+            v.append(t)
+            s = s - t * q[0] # осталось выдать
+        if s > 0:
+            print("Выдача суммы невозможна")
+        else:
+            for i in range(len(d)):
+                d[i][1] -= v[i]
+                for j in range(v[i]):
+                    print(d[i][0])
+print("ОБСЛУЖИВАНИЕ КЛИЕНТОВ ЗАВЕРШЕНО")
+"""
+"""
+# Калейдоскоп
+import random
+r = int(input("Размер узора (2-10): "))
+rr = r * 2
+s = input("Строка символов для построения узора: ")
+u = [] # сюда запишем элементы узора
+for i in range(rr):
+    us = []
+    for j in range(rr):
+        us.append(" ")
+    u.append(us)
+rr -= 1
+for i in range(r ):
+    for j in range(i + 1):
+        x = random.choice(s)
+        # этот элемент будет в 8 позициях
+        u[i][j] = x
+        u[i][rr - j] = x
+        u[rr - i][j] = x
+        u[rr - i][rr - j] = x
+        u[j][i] = x
+        u[j][rr - i] = x
+        u[rr - j][i] = x
+        u[rr - j][rr - i] = x
+for us in u:
+    for sy in us:
+        print(sy, end = "")
+    print()
+"""
+"""
+import random
+string_spell = ""
+array_items = ["Морковь", "Картофель", "Мороженое", "Монеты"]
+item = array_items[random.randint(0, len(array_items) - 1)]
+num_user = int(input(f"Какое количество {item} имеется (от 1 до 9): "))
+target_items = random.randint(10, 100)
+print(f"Ваша цель получить {item} {target_items}")
+while num_user != target_items:
+    if num_user > target_items:
+        print("Вы сделали слишком много!")
+        break
+    else:
+        spell = input("Выберите заклинание (Дупликато = d или Инкременто = i): ")
+        if spell.lower() == "i":
+            num_user *= 2
+            string_spell += "i" 
+        if spell.lower() == "d":
+            num_user += 1
+            string_spell += "d"
+        print(f"{item} = {num_user}")
+print(string_spell)
+print(f"Длина заклинаний: {len(string_spell)}")
+"""
+"""
+# Оптимизатор заклинаний
+import random
+predm = ["корни мандрагоры", "хомячков", "билеты на футбол", "крысиные хвосты",
+     "двойки по математике", "тапочки для ёжиков", "солнечных зайчиков",
+     "мыльные пузыри", "призраков", "шоколадных лягушек", "леденцовых петушков"]
+p = random.choice(predm)
+print("Сегодня мы будем размножать", p + ".")
+##kol = random.randint(1, 50)
+##aim = random.randint(kol * 2 + 1, 1000)
 
+kol = 3
+aim = 52
 
-
-
-
-
-
-
+# найдём длину оптимальной цепочки
+s = [["d", kol * 2], ["i", kol + 1]] # список возможных цепочек
+while len(s) > 0:
+    c = s.pop(0) #убрали из списка и записали в с первую цепочку
+    k = c[1]
+    if k * 2 <= aim:
+        if k * 2 == aim:
+            copt = c[0] + "d"
+            break
+        else:
+            s.append([c[0] + "d", k * 2])
+    if k + 1 == aim:
+        copt = c[0] + "i"
+        break
+    else:
+        s.append([c[0] + "i", k + 1])
+    
+print("Сейчас их", str(kol) + ",", "а нужно ровно", str(aim) + ".")
+print("Доступны заклинания Дупликато (d) и Инкременто (i).")
+print("Начали!")
+cz = 1 # счётчик заклинаний
+while True:
+    z = input(p + ": " + str(kol) + ". Заклинание №" + str(cz) + ": ")
+    if z == "d":
+        kol *= 2
+    else:
+        kol += 1
+    if kol == aim:
+        print("Вы выполнили задание. Количество заклинаний:", cz)
+        break
+    if kol > aim:
+        print("Вы не справились с задачей.")
+        break
+    cz += 1
+if kol > 0 or cz > len(copt):
+    print("Оптимальная последовательность заклинаний:")
+    print(copt)
+    print("Её длина: ", len(copt))
+else:
+    print("Ваша цепочка заклинаний оптимальна.")
+"""
