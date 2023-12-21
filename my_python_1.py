@@ -2731,12 +2731,38 @@ while x != xe or y != ye: # пока кораблик не достигнет ц
         print("Лимит ходов исчерпан.")
         break
 """  
-
-
-
-
-
-
+"""
+# Генератор имён персонажей
+import random
+minlen = int(input("Минимальная длина имени: "))
+maxlen = int(input("Максимальная длина имени: "))
+sogl = input("Допустимые согласные: ")
+gl = input("Допустимые гласные: ")
+msogl = int(input("Максимальное число согласных подряд: "))
+mgl = int(input("Максимальное число гласных подряд: "))
+q = int(input("Количество имён: "))
+for k in range(q):
+    name = ""
+    d = random.randint(minlen, maxlen) # длина имени
+    # счётчики идущих подряд сошгласных и гласных
+    csogl = 0
+    cgl = 0
+    for i in range(d):
+        if csogl == msogl:
+            b = gl[random.randint(0, len(gl) - 1)]
+        elif cgl ==mgl:
+            b = sogl[random.randint(0, len(sogl) - 1)]
+        else:
+            b = (sogl + gl)[random.randint(0, len(sogl)+len(gl) - 1)]
+        if b in gl:
+            csogl = 0
+            cgl += 1
+        else:
+            csogl += 1
+            cgl = 0
+        name += b
+    print("Имя", k + 1, name)
+"""
 
 
 
