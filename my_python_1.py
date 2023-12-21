@@ -2850,8 +2850,82 @@ for us in u:
         print(sy, end = "")
     print()
 """
+"""
+import random
+string_spell = ""
+array_items = ["Морковь", "Картофель", "Мороженое", "Монеты"]
+item = array_items[random.randint(0, len(array_items) - 1)]
+num_user = int(input(f"Какое количество {item} имеется (от 1 до 9): "))
+target_items = random.randint(10, 100)
+print(f"Ваша цель получить {item} {target_items}")
+while num_user != target_items:
+    if num_user > target_items:
+        print("Вы сделали слишком много!")
+        break
+    else:
+        spell = input("Выберите заклинание (Дупликато = d или Инкременто = i): ")
+        if spell.lower() == "i":
+            num_user *= 2
+            string_spell += "i" 
+        if spell.lower() == "d":
+            num_user += 1
+            string_spell += "d"
+        print(f"{item} = {num_user}")
+print(string_spell)
+print(f"Длина заклинаний: {len(string_spell)}")
+"""
+"""
+# Оптимизатор заклинаний
+import random
+predm = ["корни мандрагоры", "хомячков", "билеты на футбол", "крысиные хвосты",
+     "двойки по математике", "тапочки для ёжиков", "солнечных зайчиков",
+     "мыльные пузыри", "призраков", "шоколадных лягушек", "леденцовых петушков"]
+p = random.choice(predm)
+print("Сегодня мы будем размножать", p + ".")
+##kol = random.randint(1, 50)
+##aim = random.randint(kol * 2 + 1, 1000)
 
+kol = 3
+aim = 52
 
-
-
-
+# найдём длину оптимальной цепочки
+s = [["d", kol * 2], ["i", kol + 1]] # список возможных цепочек
+while len(s) > 0:
+    c = s.pop(0) #убрали из списка и записали в с первую цепочку
+    k = c[1]
+    if k * 2 <= aim:
+        if k * 2 == aim:
+            copt = c[0] + "d"
+            break
+        else:
+            s.append([c[0] + "d", k * 2])
+    if k + 1 == aim:
+        copt = c[0] + "i"
+        break
+    else:
+        s.append([c[0] + "i", k + 1])
+    
+print("Сейчас их", str(kol) + ",", "а нужно ровно", str(aim) + ".")
+print("Доступны заклинания Дупликато (d) и Инкременто (i).")
+print("Начали!")
+cz = 1 # счётчик заклинаний
+while True:
+    z = input(p + ": " + str(kol) + ". Заклинание №" + str(cz) + ": ")
+    if z == "d":
+        kol *= 2
+    else:
+        kol += 1
+    if kol == aim:
+        print("Вы выполнили задание. Количество заклинаний:", cz)
+        break
+    if kol > aim:
+        print("Вы не справились с задачей.")
+        break
+    cz += 1
+if kol > 0 or cz > len(copt):
+    print("Оптимальная последовательность заклинаний:")
+    print(copt)
+    print("Её длина: ", len(copt))
+else:
+    print("Ваша цепочка заклинаний оптимальна.")
+"""
