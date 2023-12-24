@@ -126,6 +126,101 @@ print(some_strings)
 numbers_and_strings = [7, "раз", "отпей", 1, "раз", "отешь"]
 print(numbers_and_strings)
 """
+"""
+numbers = [1, 2, 3, 4, 5]
+strings = ["хватит", "циферки", "считать"]
+mylist = [numbers, strings]
+print(mylist)
+"""
+"""
+wizard_list = ["паучьи лапки", "жабий палец", "глаз тритона", "крыло летучий мыши", "жир слизня", "перхоть змей"]
+wizard_list.append("медвежий коготь")
+print(wizard_list)
+
+wizard_list.append("мандрагора")
+wizard_list.append("болиголов")
+wizard_list.append("болотный глаз")
+print(wizard_list)
+
+del wizard_list[5]
+print(wizard_list)
+
+del wizard_list[8]
+del wizard_list[7]
+del wizard_list[6]
+print(wizard_list)
+"""
+"""
+list1 = [1, 2, 3, 4, 5]
+list2 = ["я", "забрался", "под", "кровать"]
+print(list1 + list2)
+"""
+"""
+list1 = [1, 2, 3, 4]
+list2 = ["я", "мечтаю", "о", "пломбире"]
+list3 = list1 + list2
+print(list3)
+"""
+"""
+fibs = (0, 1, 1, 2, 3)
+print(fibs[3])
+"""
+"""
+favorite_sports = ["Ральф Уильямс, Футбол",
+                   "Майкл Типпетт, Баскетбол",
+                   "Эдвард Элгар, Бейсбол",
+                   "Ребека Кларк, Нетбол",
+                   "Этель Смит, Банбинтон",
+                   "Френк Бридж, Регби"]
+print(favorite_sports)
+"""
+"""
+favorite_sports = {'Ральф Уильямс': 'Футбол',
+                   'Майкл Типпетт': 'Баскетбол',
+                   'Эдвард Элгар': 'Бейсбол',
+                   'Ребека Кларк': 'Нетбол',
+                   'Этель Смит': 'Банбинтон',
+                   'Френк Бридж': 'Регби'}
+print(favorite_sports['Ребека Кларк'])
+
+del favorite_sports['Этель Смит']
+print(favorite_sports)
+
+favorite_sports['Ральф Уильямс'] = 'Хокей на льду'
+print(favorite_sports)
+"""
+"""
+#1 Любимые вещи
+games = ["программирование", "компьюторные игры", "чтение книг"]
+foods = ["халва", "мороженое", "шаурма", "молоко", "колбаса"]
+favorites = games + foods
+print(favorites)
+"""
+"""
+#2 Подсчет войнов
+house = 3
+tunnel = 2
+ninja = 25
+samurai = 40
+wars = (house * ninja) + (tunnel * samurai)
+print("Войнов: %s" % wars)
+"""
+"""
+name = "Евгений"
+surname = "Голиченков"
+text = 'Привет, %s %s!'
+print(text % (name, surname))
+"""
+
+
+
+
+
+
+
+
+
+
 
 
 
