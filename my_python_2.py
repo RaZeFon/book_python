@@ -211,6 +211,110 @@ surname = "Голиченков"
 text = 'Привет, %s %s!'
 print(text % (name, surname))
 """
+"""
+import turtle
+t = turtle.Pen()
+t.forward(50) #сдвинуться в перед на 50 пикселей
+t.left(90) #повернуть на 90 градусов в лево
+t.forward(50) 
+t.left(90)
+t.forward(50) 
+t.left(90)
+t.forward(50) 
+t.left(90)
+#нарисовали квадрат
+
+t.reset()
+t.clear()
+
+t.reset()
+t.backward(100)
+t.up()
+t.right(90)
+t.forward(20)
+t.left(90)
+t.down()
+t.forward(100)
+"""
+"""
+# Прямоугольник
+import turtle
+cursor = turtle.Pen()
+#cursor.reset() #Если нужно очистить холст
+cursor.forward(100)
+cursor.right(90)
+cursor.forward(40)
+cursor.right(90)
+cursor.forward(100)
+cursor.right(90)
+cursor.forward(40)
+cursor.right(90)
+"""
+"""
+#Треугольник
+import turtle
+cursor = turtle.Pen()
+#cursor.reset() #Если нужно очистить холст
+cursor.left(60)
+cursor.forward(100)
+cursor.right(120)
+cursor.forward(100)
+cursor.right(120)
+cursor.forward(100)
+"""
+"""
+#Рамка квадрата без углов
+import turtle
+cursor = turtle.Pen()
+#cursor.reset() #Если нужно очистить холст
+cursor.forward(100)
+cursor.up()
+cursor.forward(20)
+cursor.right(90)
+cursor.forward(20)
+cursor.down()
+cursor.forward(100)
+cursor.up()
+cursor.forward(20)
+cursor.right(90)
+cursor.forward(20)
+cursor.down()
+cursor.forward(100)
+cursor.up()
+cursor.forward(20)
+cursor.right(90)
+cursor.forward(20)
+cursor.down()
+cursor.forward(100)
+"""
+"""
+age = 25 
+if age > 20:
+    print("Как-то вы староваты!")
+    print("Что вы здесь делаете?")
+    print("Почему не стрижете газон или не перекладываете бумажки?")
+"""
+"""
+age = 10
+if age >= 10:
+    print("Вы слишком стары для моих шуток!")
+"""
+"""
+age = 10
+if age == 10:
+    print("Что нельзя съесть на завтрак? Обед и ужин!")
+"""
+"""
+print("Хотите услышить грязную шутку?")
+age = 12 
+if age == 12:
+    print("Свинья шлёпнулась в грязь!")
+else:
+    print("Тсс! Это секрет.")
+"""
+
+
+
 
 
 
