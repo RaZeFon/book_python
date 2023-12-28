@@ -312,6 +312,161 @@ if age == 12:
 else:
     print("Тсс! Это секрет.")
 """
+"""
+print("Хотите услышить грязную шутку?")
+age = 8 
+if age == 12:
+    print("Свинья шлёпнулась в грязь!")
+else:
+    print("Тсс! Это секрет.")
+"""
+"""
+age = 12
+if age == 10:
+    print("Что будет если клюква наденит штаны?")
+    print("Брюква")
+elif age == 11:
+    print("Что сказала зелёная виноградена синей виноградине?")
+    print("Дыши! Дыши!")
+elif age == 12:
+    print("Что сказало чило 0 числу 8?")
+    print("Привет, ребята!")
+elif age == 13:
+    print("Что такое: на полочке сидит и хохочет?")
+    print("Муха-хохотуха!")
+else:
+    print("Что-что?")
+"""
+"""
+age = 10
+if age == 10 or age == 11 or age == 12 or age == 13:
+    print("13 + 49 + 155 + 97: что получиться? Головная боль!")
+else:
+    print("Что-что?")
+"""
+"""
+age = 10
+if age >= 10 and age <= 13:
+    print("13 + 49 + 155 + 97: что получиться? Головная боль!")
+else:
+    print("Что-что?")
+"""
+"""
+myval = None
+if myval == None:
+    print("В переменой myval ничего нет!")
+"""
+'''
+age = 10
+if age == 10:
+    print("Как лучше всего общаться с монстром?")
+    print("Издалека!")
+'''
+"""
+age = "10"
+converted_age = int(age)
+print(converted_age, type(converted_age))
+
+age = 10
+converted_age = str(age)
+print(converted_age, type(converted_age))
+"""
+"""
+age = '10'
+converted_age = int(age)
+if converted_age == 10:
+    print("Как лучше всего общаться с монстром?")
+    print("Издалека!")
+"""
+"""
+age = "10.5"
+converted_age = float(age)
+print(converted_age)
+print(int(converted_age))
+"""
+"""
+#1 Вы богаты?
+money = 2000
+if money > 1000:
+    print("Я богат!")
+else:
+    print("Я не богат!")
+    print("Может, когда-нибудь потом...")
+"""
+"""
+#2 Бисквитики!
+twinkies = 540
+if twinkies < 100 or twinkies > 500:
+    print("Слишком мало или слишком много")
+"""
+"""
+#3 Подходящая сумма
+money = 103
+if (money >= 100 and money <= 500) or (money >= 1000 and money <= 5000):
+    print("Сумма %s соответствует заданному диапозону." % money)
+"""
+"""
+#4 Я одолею этих нинзя!
+ninjas = 45
+if ninjas < 10:
+    print("Я одолею этих нинзя!")
+elif ninjas < 30:
+    print("Будет непросто, но я сними разделаюсь.")
+elif ninjas < 50:
+    print("Их слишком много!")
+else:
+    print("Это самоубийство!")
+"""
+"""
+print("Привет!")
+print("Привет!")
+print("Привет!")
+print("Привет!")
+print("Привет!")
+"""
+"""
+for x in range(0, 5):
+    print("Привет!")
+"""
+"""
+for x in range(0, 5):
+    print("Привет №%s" % (x + 1))
+"""
+"""
+x = 0
+print("Привет №%s" % (x + 1))
+x = 1
+print("Привет №%s" % (x + 1))
+x = 2
+print("Привет №%s" % (x + 1))
+x = 3
+print("Привет №%s" % (x + 1))
+x = 4
+print("Привет №%s" % (x + 1))
+"""
+"""
+wizard_list = ['паучьи лапки', 'жабий палец', 'язык улитки',
+               'крыло летучей мыши', 'жир слизня', 'медвежий коготь']
+for x in wizard_list:
+    print(x)
+"""
+"""
+wizard_list = ['паучьи лапки', 'жабий палец', 'язык улитки',
+               'крыло летучей мыши', 'жир слизня', 'медвежий коготь']
+print(wizard_list[0])
+print(wizard_list[1])
+print(wizard_list[2])
+print(wizard_list[3])
+print(wizard_list[4])
+print(wizard_list[5])
+"""
+"""
+hugehairypants = ['огромные', 'волосатые', 'штаны']
+for i in hugehairypants:
+    print(i)
+    print(i)
+"""
+
 
 
 
