@@ -466,11 +466,31 @@ for i in hugehairypants:
     print(i)
     print(i)
 """
+"""
+hugehairypants = ['огромные', 'волосатые', 'штаны']
+for i in hugehairypants:
+    print(i)
+    for j in hugehairypants:
+        print(j)
+"""
+"""
+magic_coins = 10
+found_coins = 20
+stolen_coins = 3
+for i in range(0, 52):
+    for j in range(0, 7):
+        found_coins += magic_coins
+    found_coins -= stolen_coins
+    print("%s Неделя денег получино: %s" % (i+1, found_coins))
+"""
 
-
-
-
-
+found_coins = 20
+magic_coins = 70
+stolen_coins = 3
+coint = found_coins
+for week in range(1, 53):
+    coint = coint + magic_coins - stolen_coins
+    print('Неделя %s = %s' % (week, coint))
 
 
 
