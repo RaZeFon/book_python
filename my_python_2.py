@@ -483,7 +483,7 @@ for i in range(0, 52):
     found_coins -= stolen_coins
     print("%s Неделя денег получино: %s" % (i+1, found_coins))
 """
-
+"""
 found_coins = 20
 magic_coins = 70
 stolen_coins = 3
@@ -491,15 +491,78 @@ coint = found_coins
 for week in range(1, 53):
     coint = coint + magic_coins - stolen_coins
     print('Неделя %s = %s' % (week, coint))
+"""
+"""
+for step in range(0, 20):
+    print(step)
+"""
+"""
+tired = 0
+badweathet = 0
+step = 0
+while step < 10000:
+    print(step)
+    if tired == True:
+        break
+    elif badweathet == True:
+        break
+    else:
+        step = step + 1
+"""
+"""
+x = 45
+y = 80
+while x < 50 and y < 100:
+    x = x + 1
+    y = y + 1
+    print(x, y)
+"""
+"""
+some_value = 0
+while True:
+    #текст кода
+    #текст кода
+    #текст кода
+    if some_value == True:
+        break
+"""
+"""
+# 1. Цикл с приветом
+for x in range(0, 20):
+    print("Привет %s" % x)
+    if x > 9:
+        break
+"""
+'''
+# 2. Четные числа
+age = 35
+for i in range(1, age + 1):
+    if age % 2 != 0:
+        print(i)
+'''
+"""
+# 3. Пять любимых ингридиентов
+ingredients = ['слизни', 'пиявки', 'катышки из пупка гориллы',
+               'бровки гусеницы', 'пальци многоножки']
+num = 1
+for i in ingredients:
+    print(f"{num}: {i}")
+    num += 1
 
-
-
-
-
-
-
-
-
+ingredients = ['слизни', 'пиявки', 'катышки из пупка гориллы',
+               'бровки гусеницы', 'пальци многоножки']
+num = 1
+for i in ingredients:
+    print(str(num) + ": %s" % i)
+    num += 1
+"""
+"""
+# 4. Ваш лунный вес
+weight = 61
+for i in range(0, 15 + 1):
+    moon_weight = (weight + i) * 0.165
+    print(i+1, "год", moon_weight, "вес")
+"""
 
 
 
