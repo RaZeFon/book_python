@@ -604,7 +604,7 @@ def variable_test2():
     return first_variable * second_variable * another_variable
 print(variable_test2())
 '''
-
+'''
 def spaceship_building(cans):
     total_cans = 0
     for week in range(1, 53):
@@ -612,6 +612,74 @@ def spaceship_building(cans):
         print('Неделя %s, банок: %s' % (week, total_cans))
 
 spaceship_building(2)
+'''
+'''
+import time
+print(time.asctime())
+'''
+'''
+import sys
+print(sys.stdin.readline())
+'''
+'''
+age = 9
+if age >= 10 and age <= 13:
+    print('13 + 49 + 84 + 155 + 97: что получится? Головная боль!')
+else:
+    print('Что-что?')
+
+def silly_age_joke(age):
+    if age >= 10 and age <= 13:
+        print('13 + 49 + 84 + 155 + 97: что получиться? Головная боль!')
+    else:
+        print('Что-что?')
+
+silly_age_joke(12)
+'''
+'''
+import sys
+def silly_age_joke():
+    print('Сколько вам лет?')
+    age = int(sys.stdin.readline())
+    if age >= 10 and age <= 13:
+        print('13 + 49 + 84 + 155 + 97: что получится? Головная боль!')
+    else:
+        print('Что-что?')
+silly_age_joke()
+'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
