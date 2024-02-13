@@ -647,18 +647,67 @@ def silly_age_joke():
         print('Что-что?')
 silly_age_joke()
 '''
+'''
+# 1 Функция лунного веса
+def moon_weight(weight, multiplier):
+    weight = weight * 0.165
+    for year in range(1, 16):
+        weight = weight + multiplier
+        print('Год: %s, Лунный Вес %s' % (year, weight))
+moon_weight(65, 0.25)
+'''
+'''
+# 2 Функция лунного веса и количества лет
+def moon_weight(weight, multiplier, age):
+    weight = weight * 0.165
+    for year in range(0, age):
+        weight = weight + multiplier
+        print("Год: %s, Лунный вес: %s" % (year+1, weight))
+moon_weight(90, 0.25, 5)
+'''
+'''
+# 3 Программа для луного веса
+import sys 
+def moon_weight():
+    print("Введите ваш нынешний земной вес: ")
+    weight = int(sys.stdin.readline()) * 0.165
+    print("Введите ежигодный прирост вашего веса: ")
+    multiplier = float(sys.stdin.readline())
+    print("Введите количество лет: ")
+    for year in range(0, int(sys.stdin.readline())):
+        weight = weight + multiplier
+        print("Год: %s, Лунный вес: %s" % (year+1, weight))
+moon_weight()
+'''
+'''
+class Things:
+    pass
+'''
+'''
+class Things:
+    pass
 
-
-
-
-
-
-
-
-
-
-
-
+class Inanimate(Things):
+    pass
+class Animate(Things):
+    pass
+'''
+'''
+class Inanimate:
+    pass
+class Sidewalks(Inanimate):
+    pass
+'''
+'''
+class Animate:
+    pass
+class Animals(Animate):
+    pass
+class Mammals(Animals):
+    pass
+class Giraffes(Mammals):
+    pass
+'''
 
 
 
