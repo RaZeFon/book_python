@@ -709,8 +709,94 @@ class Giraffes(Mammals):
     pass
 '''
 
+"""
+reginald = Giraffes()
+"""
+"""
+def this_is_a_normal_function():
+    print("Я - обычная функция")
 
+#вот несколько функции
+class ThisIsSillyClass:
+    def this_is_a_class_function():
+        print('Я - функция класса')
+    def this_is_also_a_class_function():
+        print("Я тоже функция классаБ понятно?")
+"""
+"""
+class Animals(Animate):
+    def breathe(self):
+        pass
+    def move(self):
+        pass
+    def eat_food(self):
+        pass
 
+class Mammals(Animals):
+    def feed_yound_with_milk(self):
+        pass
+
+class Giraffes(Mammals):
+    def eat_leaves_from_trees(self):
+        pass
+
+reginald = Giraffes()
+
+reginald = Giraffes()
+reginald.move()
+reginald.eat_leaves_from_trees()
+
+harold = Giraffes()
+harold.move()
+
+class Animals(Animate):
+    def breathe(self):
+        print('дышит')
+    def move(self):
+        print('двигается')
+    def eat_food(self):
+        print('ест')
+
+class Mammals(Animals):
+    def feed_young_with_milk(self):
+        print('кормит детенышей молоком')
+
+class Giraffes(Mammals):
+    def eat_leaves_from_trees(self):
+        print('ест листья')
+
+reginald = Giraffes()
+harold = Giraffes()
+reginald.move()
+harold.eat_leaves_from_trees()
+"""
+'''
+import turtle
+avery = turtle.Pen()
+kate = turtle.Pen()
+
+avery.forward(50)
+avery.right(90)
+avery.forward(20)
+
+kate.left(90)
+kate.forward(100)
+
+jacob = turtle.Pen()
+jacob.left(180)
+jacob.forward(80)
+'''
+'''
+reginald = Giraffes()
+reginald.move()
+
+reginald = Giraffes()
+reginald.breathe()
+reginald.eat_food()
+reginald.feed_young_with_milk()
+
+reginald.move()
+'''
 
 
 
