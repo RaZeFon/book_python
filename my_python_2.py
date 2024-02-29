@@ -797,8 +797,44 @@ reginald.feed_young_with_milk()
 
 reginald.move()
 '''
+"""
+class Giraffes(Mammals):
+    def find_food(self):
+        self.move()
+        print("Я нашёл еду!")
+        self.eat_food()
 
+class Giraffes(Mammals):
+    def find_food(self):
+        self.move()
+        print("Я нвшёл еду!")
+        self.eat_food()
+    def eat_leaves_from_trees(self):
+        self.eat_foot()
+    def dance_a_jig(self):
+        self.move()
+        self.move()
+        self.move()
+        self.move()
 
+reginald = Giraffes()
+reginald.dance_a_jig()
+
+class Giraffes:
+    def __init__(self, spots):
+        self.giraffe_spots = spots
+
+ozwald = Giraffes(100)
+gertrude = Giraffes(150)
+print(ozwald.giraffe_spots)
+print(gertrude.giraffe_spots)
+
+def  left_foot_forward(self):
+    print('левая нога впереди')
+
+reginald = Giraffes()
+reginald.dance()
+"""
 
 
 
